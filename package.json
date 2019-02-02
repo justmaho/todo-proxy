@@ -1,0 +1,11 @@
+{
+  "name": "todo-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "",
+  "author": "justmaho",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo no tests for this project"
+  }
+}
