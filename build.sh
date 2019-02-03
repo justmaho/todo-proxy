@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build . -t justmaho/todo-list-proxy
+docker build . -t justmaho/todo-proxy
