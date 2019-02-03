@@ -27,7 +27,7 @@ logLevel = "DEBUG"
 [backends]
   [backends.backend1]
     [backends.backend1.servers.server1]
-    url = "https://pdes-2018-todo-list-front.herokuapp.com/"
+    url = "https://maho-todo-client.herokuapp.com/"
   [backends.backend2]
     [backends.backend2.servers.server1]
-    url = "https://pdes-2018-todo-list-back.herokuapp.com/"
+    url = "https://maho-todo-api.herokuapp.com/"
