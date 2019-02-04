@@ -6,7 +6,7 @@ logLevel = "DEBUG"
   format   = "json"
 
 [entryPoints]
-  [entryPoints.https]
+  [entryPoints.http]
     address = ":80" # will be overriden
   [entryPoints.webadmin]
     address = ":8090"
