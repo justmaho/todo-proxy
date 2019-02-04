@@ -23,6 +23,10 @@ deploy:
     # push to dockerhub & heroku
     docker push justmaho/todo-proxy;
     docker push registry.heroku.com/$HEROKU_APP/web;
+    heroku container:push web --app $HEROKU_APP_NAME;
     heroku container:release web --app $HEROKU_APP
   on:
     branch: master
+
+  notifications:
+    slack: 26781ba0e95527698bc9f92d8f96cdd4ed193da5
