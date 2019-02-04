@@ -8,12 +8,13 @@ logLevel = "DEBUG"
 [entryPoints]
   [entryPoints.http]
     address = ":80" # will be overriden
-  [entryPoints.webadmin]
-    address = ":8090"
+  [entryPoints.traefik]
+    address = ":8080"
+    compress = true
 
 [api]
   dashboard = true
-  entryPoint = "webadmin"
+  entryPoint = "traefik"
 
 [frontends]
   [frontends.frontend1]
@@ -24,6 +25,11 @@ logLevel = "DEBUG"
     [frontends.frontend2.routes.test_1]
       rule = "Path:/todos"
   
+  [frontends.traefikAPI]
+    backend = "traefik"
+    [frontends.traefikAPI.routes.traefikAPI]
+      rule = "PathPrefixStrip:/traefik"
+  
 [backends]
   [backends.backend1]
     [backends.backend1.servers.server1]
@@ -31,3 +37,6 @@ logLevel = "DEBUG"
   [backends.backend2]
     [backends.backend2.servers.server1]
     url = "https://maho-todo-api.herokuapp.com/"
+  [backends.traefik]
+    [backends.traefik.servers.traefik]
+      url = "http://localhost:8080"
