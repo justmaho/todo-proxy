@@ -24,7 +24,7 @@ deploy:
     docker push justmaho/todo-proxy;
     docker push registry.heroku.com/$HEROKU_APP/web;
     heroku container:push web --app $HEROKU_APP_NAME;
-    heroku container:release web --app $HEROKU_APP
+    heroku container:release web --app $HEROKU_APP_NAME;
   on:
     branch: master
 
