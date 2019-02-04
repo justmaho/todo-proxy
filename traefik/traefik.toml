@@ -1,4 +1,4 @@
-defaultEntryPoints = ["https"]
+defaultEntryPoints = ["http"]
 logLevel = "DEBUG"
 
 [traefikLog]
@@ -6,7 +6,7 @@ logLevel = "DEBUG"
   format   = "json"
 
 [entryPoints]
-  [entryPoints.http]
+  [entryPoints.https]
     address = ":80" # will be overriden
   [entryPoints.webadmin]
     address = ":8090"
