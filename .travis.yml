@@ -28,5 +28,5 @@ deploy:
   on:
     branch: master
 
-  notifications:
-    slack: 26781ba0e95527698bc9f92d8f96cdd4ed193da5
+notifications:
+  slack: 26781ba0e95527698bc9f92d8f96cdd4ed193da5
